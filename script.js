@@ -33,22 +33,20 @@ let indexArray = [],
   output,
   nextOutput;
 
-// Define a for loop for text
-
-
-
+// check if text includes keyword
 
     if (text.includes(KeyWord)) {
 
         output = text.indexOf(KeyWord);
         
+        // while output is not undefined, push output to indexArray and  then find the next output
         while ( output !==-1) {
             indexArray.push(output);
             output = text.indexOf(KeyWord, output+1);
             
         }
    
-  }
+  } // if there isn't any show a message
   else {
     console.log("There is no", KeyWord, "in this text!");
   }
