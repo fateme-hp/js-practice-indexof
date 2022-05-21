@@ -22,7 +22,7 @@ let KeyWord;
 
 function myKeyWord(word) {
   KeyWord = word;
-  console.log(KeyWord);
+
 
         //Define an Array and output
 
@@ -42,12 +42,12 @@ function myKeyWord(word) {
                   
               }
 
-              console.log(indexArray);
-              console.log(indexArray.length);  
+              console.log( KeyWord + " : ", indexArray);
+              console.log("این متن شامل",indexArray.length , "کلمه '"+ KeyWord+"' میباشد");  
         
         } // if there isn't any show a message
         else {
-          console.log("There is no", KeyWord, "in this text!");
+          console.log("این متن شامل کلمه", KeyWord, "نمیشود");
         }
 }
 
