@@ -23,34 +23,36 @@ let KeyWord;
 function myKeyWord(word) {
   KeyWord = word;
   console.log(KeyWord);
+
+        //Define an Array and output
+
+      let indexArray = [],
+        output;
+
+      // check if text includes keyword
+
+          if (text.includes(KeyWord)) {
+
+              output = text.indexOf(KeyWord);
+              
+              // while output is not undefined, push output to indexArray and  then find the next output
+              while ( output !==-1) {
+                  indexArray.push(output);
+                  output = text.indexOf(KeyWord, output+1);
+                  
+              }
+
+              console.log(indexArray);
+              console.log(indexArray.length);  
+        
+        } // if there isn't any show a message
+        else {
+          console.log("There is no", KeyWord, "in this text!");
+        }
 }
 
 myKeyWord("مورد نیاز");
 
-//Define an Array and output
 
-let indexArray = [],
-  output,
-  nextOutput;
-
-// check if text includes keyword
-
-    if (text.includes(KeyWord)) {
-
-        output = text.indexOf(KeyWord);
-        
-        // while output is not undefined, push output to indexArray and  then find the next output
-        while ( output !==-1) {
-            indexArray.push(output);
-            output = text.indexOf(KeyWord, output+1);
-            
-        }
-   
-  } // if there isn't any show a message
-  else {
-    console.log("There is no", KeyWord, "in this text!");
-  }
   
-  console.log(indexArray);
-  console.log(indexArray.length);
 
